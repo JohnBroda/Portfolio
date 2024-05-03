@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    h2{
+        margin: 0px;
+        margin-left: 100px;
+        font-size: 48px;
+    }
+    a:nth-child(3){
+        margin-right: 100px;
+    }
+    a{
+        margin: 20px;
+        font-size: 24px;
+        &:hover{
+            color: rgb(0,190,232);
+            text-decoration: underline rgb(75,71,255);
+        }
+    }
+
+}
