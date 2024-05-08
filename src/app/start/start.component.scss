@@ -36,7 +36,7 @@
 
     .letsTalk{
         @include flex();
-        p {
+        a {
             @include flex();
             @include font(400, 23px);
             margin-top: 44px;
