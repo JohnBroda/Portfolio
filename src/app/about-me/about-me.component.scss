@@ -2,8 +2,16 @@
 
 .startFlex {
     @include flex(center, space-between);
+
     img {
+        z-index: -2;
         margin-left: 100px;
+        width: 650px;
+        height: 705px;
+    }
+
+    .nameAndJobFlex {
+        @include flex(center);
     }
 
     .iam {
@@ -24,7 +32,10 @@
             @include font(400, 58px);
             color: rgb(75, 71, 255);
         }
+    }
 
+    .letsTalk{
+        @include flex();
         p {
             @include flex();
             @include font(400, 23px);
@@ -35,8 +46,9 @@
             border-radius: 10px;
             transition: 0.07s;
             cursor: pointer;
-
+    
             &:hover {
+                margin-top: 34px;
                 font-weight: 600;
                 background-color: #4B47FF;
                 width: 175px;
@@ -44,6 +56,7 @@
             }
         }
     }
+
 }
 
 .Vector {
@@ -68,7 +81,8 @@
 
     a:nth-child(5) {
         @include font(400, 23px);
-        &:hover{
+
+        &:hover {
             color: #4B47FF;
         }
     }
@@ -76,7 +90,8 @@
     img {
         width: 28px;
         margin: 1px;
-        &:hover{
+
+        &:hover {
             width: 30px;
             margin: 0px;
         }
