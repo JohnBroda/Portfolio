@@ -1,8 +1,8 @@
+@import './../mixin.scss';
+
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px;
+    @include flex(center, space-between);
+    height: 110px;
     h2{
         margin: 0px;
         margin-left: 100px;
@@ -13,7 +13,7 @@ header{
     }
     a{
         margin: 20px;
-        font-size: 24px;
+        font-size: 23px;
         &:hover{
             color: rgb(0,190,232);
             text-decoration: underline rgb(75,71,255);
