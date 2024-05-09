@@ -7,9 +7,12 @@ body{
     font-family: poppins;
     background-color: rgb(20,29,47);
     width: 100%;
+    max-width: 1920px;
     height: 100vh;
     margin: 0px;
     color: white;
+    overflow-x: hidden;
+    
     a{
         color: white;
         text-decoration: none ;
