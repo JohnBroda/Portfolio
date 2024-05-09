@@ -1,0 +1,48 @@
+@import './../mixin.scss';
+
+.skillsFlex {
+    margin-top: 260px;
+    @include flex(center, space-between);
+
+
+    .skillIcons {
+        @include flex(center, start);
+        gap: 130px;
+        flex-wrap: wrap;
+        width: 700px;
+        margin-left: 100px;
+        text-align: center;
+
+        img:nth-child(1){
+           
+        }
+
+        p{
+            margin: 0px;
+        }
+    }
+
+    .skills{
+        text-align: end;
+        @include flex(start, none);
+
+        h1{
+            @include font(700, 90px);
+            margin-bottom: 31px;
+        }
+
+        .skillsSpace{
+            margin-right: 100px;
+            width: 470px;
+        }
+
+        .line{
+            margin-top: 70px;
+            width: 60px;
+            height: 2px;
+            background-color: rgb(75,71,255);
+        }
+    }
+
+
+}

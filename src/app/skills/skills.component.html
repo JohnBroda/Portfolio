@@ -1,0 +1,18 @@
+<div class="skillsFlex">
+    <div class="skillIcons">
+        @for(skills of images; track skills;){
+        <div>
+            <img src="./../../assets/img/icons/{{ [skills.number] }}.png">
+            <p>{{ [skills.name] }}</p>
+        </div>
+        }
+    </div>
+    <div class="skills">
+        <div class="skillsSpace">
+            <h1>My skills</h1>
+            <span>I have grown my frontend developments skills that have allowed me to create different real
+                projects.</span>
+        </div>
+        <div class="line"></div>
+    </div>
+</div>
