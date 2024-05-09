@@ -1,13 +1,19 @@
 @import './../mixin.scss';
 
+.bgcolors{
+    position: absolute;
+    top: 150px;
+    z-index: -3;
+}
+
 .startFlex {
     @include flex(center, space-between);
 
     img {
         z-index: -2;
-        margin-left: 100px;
-        width: 650px;
-        height: 705px;
+        margin-left: 180px;
+        width: 530px;
+        height: 795px;
     }
 
     .nameAndJobFlex {
@@ -20,17 +26,18 @@
     }
 
     .nameAndJob {
-        margin-right: 100px;
-        text-align: center;
-        @include flex(center, center, column);
+        margin-right: 120px;
+        @include flex(start, center, column);
 
         h1 {
             @include font(700, 90px);
+            height: 105px
         }
 
         h2 {
             @include font(400, 58px);
             color: rgb(75, 71, 255);
+            height: 100px
         }
     }
 
@@ -58,7 +65,7 @@
     }
 
     .spacer{
-        margin-bottom: 100px;
+        margin-bottom: 240px;
     }
 }
 
@@ -70,9 +77,20 @@
     z-index: -1;
 }
 
+.scrollDown{
+    @include flex(center, center, column);
+    position: absolute;
+    right: 76px;
+    top: 780px;
+    p{
+        @include font(400, 23px);
+        margin-bottom: 60px;
+        transform: rotate(90deg)
+    }
+}
+
 .sozial {
     @include flex(center, start);
-    margin-top: 70px;
     gap: 40px;
     width: 700px;
     height: 40px;
