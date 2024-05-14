@@ -58,8 +58,9 @@ span {
 
     .joinText {
         @include flex(end, center, column);
-        text-align: end;
         @include portfolio();
+        text-align: end;
+        margin-right: 35px;
 
         .github:hover {
             margin-left: -10px;
@@ -71,6 +72,7 @@ span {
     @include flex(center, center);
 
     .elpollolocoText {
+        margin-left: 35px;
         @include portfolio(start);
 
         .test:hover {
