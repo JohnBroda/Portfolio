@@ -1,6 +1,6 @@
 @import './../mixin.scss';
 
-.bgcolors{
+.bgcolors {
     position: absolute;
     top: 150px;
     z-index: -3;
@@ -41,30 +41,15 @@
         }
     }
 
-    .letsTalk{
+    .letsTalk {
         @include flex();
+
         a {
-            @include flex();
-            @include font(400, 23px);
-            margin-top: 44px;
-            background-color: #00BEE8;
-            width: 165px;
-            height: 58px;
-            border-radius: 10px;
-            transition: 0.07s;
-            cursor: pointer;
-    
-            &:hover {
-                margin-top: 34px;
-                font-weight: 600;
-                background-color: #4B47FF;
-                width: 175px;
-                height: 68px;
-            }
+            @include button1()
         }
     }
 
-    .spacer{
+    .spacer {
         margin-bottom: 240px;
     }
 }
@@ -77,12 +62,13 @@
     z-index: -1;
 }
 
-.scrollDown{
+.scrollDown {
     @include flex(center, center, column);
     position: absolute;
     right: 76px;
     top: 780px;
-    p{
+
+    p {
         @include font(400, 23px);
         margin-bottom: 60px;
         transform: rotate(90deg)
@@ -103,19 +89,26 @@
 
     a:nth-child(5) {
         @include font(400, 23px);
+        transition: 0.1s;
 
         &:hover {
-            color: #4B47FF;
+            @include font(800, 23px);
+            transition: 0.1s;
+            color: #00BEE8;
         }
     }
 
     img {
+        image-rendering: pixelated;
         width: 28px;
         margin: 1px;
+        transition: 0.1s;
 
         &:hover {
+            transition: 0.1s;
             width: 30px;
             margin: 0px;
+            filter: drop-shadow(0px 0px 4px #00BEE8);
         }
     }
 

@@ -32,19 +32,21 @@
         }
 
         img {
-            transition: 0.5s;
-        }
-
-        img:hover {
-            transform: translateY(-20px);
+            transition: 0.6s;
+            transform: translateY(0px);
         }
 
         .skill {
-            transition: 0.5s;
+            transition: 0.4s;
 
             &:hover {
                 color: #00BEE8;
                 filter: drop-shadow(0px 0px 8px #00BEE8);
+
+                img {
+                    transition: 0.4s;
+                    transform: translateY(-20px);
+                }
             }
         }
 
@@ -54,19 +56,8 @@
         }
     }
 
-    .skills {
-        text-align: end;
-        @include flex(start, none);
-
-        h1 {
-            @include font(700, 90px);
-            margin-bottom: 31px;
-        }
-
-        .skillsSpace {
-            margin-right: 100px;
-            width: 470px;
-        }
+    .skillTextFlex {
+        @include flex(start);
 
         .line {
             margin-top: 70px;
@@ -74,7 +65,29 @@
             height: 2px;
             background-color: rgb(75, 71, 255);
         }
+
+        .getintouch {
+            @include flex(center, center, column);
+            width: 470px;
+
+            .skills {
+                text-align: end;
+                @include flex(start, none);
+
+                h1 {
+                    @include font(700, 90px);
+                    margin-bottom: 31px;
+                }
+
+                .skillsSpace {
+                    margin-right: 100px;
+                    width: 470px;
+                }
+            }
+            
+            a{
+                @include button1(200px)
+            }
+        }
     }
-
-
 }

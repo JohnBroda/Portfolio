@@ -5,8 +5,28 @@
     flex-direction: $fd;
 }
 
-@mixin font($fw,$fs) {
+@mixin font($fw, $fs) {
     font-weight: $fw;
     font-size: $fs;
     margin: 0;
+}
+
+@mixin button1($width: 165px, $bg: #00BEE8, $bgh: #4B47FF) {
+    @include flex();
+    @include font(400, 23px);
+    margin-top: 44px;
+    background-color: $bg;
+    width: $width;
+    height: 58px;
+    border-radius: 10px;
+    transition: 0.07s;
+    cursor: pointer;
+
+    &:hover {
+        margin-top: 34px;
+        font-weight: 600;
+        background-color: $bgh;
+        width: $width+10;
+        height: 68px;
+    }
 }

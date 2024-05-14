@@ -1,0 +1,89 @@
+@import './../mixin.scss';
+
+@mixin portfolio($s: end) {
+    width: 530px;
+    margin-left: 35px;
+
+    h2 {
+        @include font(700, 32px);
+        color: #4B47FF
+    }
+
+    h3 {
+        @include font(400, 23px);
+        color: #00BEE8
+    }
+
+    .link {
+        @include flex(center, $s);
+        gap: 86px;
+    }
+}
+
+.portfolioFlex {
+    @include flex(center, end);
+    margin-top: 260px;
+
+    .portfoliolineFlex {
+        @include flex(center, center);
+
+        .line1 {
+            width: 109px;
+            height: 2px;
+            margin-right: 36px;
+            background-color: rgb(75, 71, 255);
+        }
+
+        h1 {
+            @include font(700, 90px);
+        }
+    }
+
+    .line2 {
+        width: 39%;
+        height: 2px;
+        margin-left: 36px;
+        background-color: rgb(75, 71, 255);
+    }
+}
+
+span {
+    @include flex(center, center);
+    margin-top: 35px;
+}
+
+.join {
+    @include flex(center, center);
+    margin-top: 120px;
+
+    .joinText {
+        @include flex(end, center, column);
+        text-align: end;
+        @include portfolio();
+
+        .github:hover {
+            margin-left: -10px;
+        }
+    }
+}
+
+.elpolloloco {
+    @include flex(center, center);
+
+    .elpollolocoText {
+        @include portfolio(start);
+
+        .test:hover {
+            margin-right: -10px
+        }
+    }
+}
+
+.test {
+    @include button1(152px, #4B47FF, #00BEE8);
+}
+
+.github {
+    @include button1(136px, none, #00BEE8);
+    box-shadow: 0px 0px 0px 1px #00BEE8;
+}
