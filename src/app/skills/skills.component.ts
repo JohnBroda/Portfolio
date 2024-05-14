@@ -8,16 +8,22 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  images = [
+  images0to3 = [
     { name: 'Angular', number: 0},  
     { name: 'TypeScript', number: 1},
     { name: 'JavaScript', number: 2},
     { name: 'HTML', number: 3},
+  ];
+
+  images4to7 = [
     { name: 'Firebase', number: 4},
     { name: 'Git', number: 5},
     { name: 'CSS', number: 6},
-    { name: 'REST API', number: 7},
+    { name: 'REST API', number: 7}
+  ]
+
+  images8to9 = [
     { name: 'Scrum', number: 8},
     { name: 'Material Design', number: 9},
-  ];
+  ]
 }

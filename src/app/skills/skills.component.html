@@ -1,11 +1,29 @@
 <div class="skillsFlex">
     <div class="skillIcons">
-        @for(skills of images; track skills;){
-        <div>
-            <img src="./../../assets/img/icons/{{ [skills.number] }}.png">
-            <p>{{ [skills.name] }}</p>
+        <div class="images0to3">
+            @for(skills of images0to3; track skills;){
+            <div class="skill">
+                <img src="./../../assets/img/icons/{{ [skills.number] }}.png">
+                <p>{{ [skills.name] }}</p>
+            </div>
+            }
         </div>
-        }
+        <div class="images4to7">
+            @for(skills of images4to7; track skills;){
+            <div class="skill">
+                <img src="./../../assets/img/icons/{{ [skills.number] }}.png">
+                <p>{{ [skills.name] }}</p>
+            </div>
+            }
+        </div>
+        <div class="images8to9">
+            @for(skills of images8to9; track skills;){
+            <div class="skill">
+                <img src="./../../assets/img/icons/{{ [skills.number] }}.png">
+                <p>{{ [skills.name] }}</p>
+            </div>
+            }
+        </div>
     </div>
     <div class="skills">
         <div class="skillsSpace">
