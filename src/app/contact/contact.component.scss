@@ -1,0 +1,136 @@
+@import './../mixin.scss';
+
+.textAndMailFlex {
+    @include flex(center, space-between);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 85px;
+
+    .textFlex {
+        width: 470px;
+
+        h2{
+            @include font(700, 32px)
+        }
+
+        .contactText{
+            @include flex(center, start);
+            gap: 8px;
+
+            a{
+                font-weight: 700;
+                &:hover{
+                    color: #00BEE8;
+                }
+            }
+        }
+    }
+
+    .mailFlex{
+        @include flex(center, center, column);
+        width: 620px;
+        
+        
+        input{
+            all: unset;
+            width: 620px;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 50px;
+            box-shadow: 0px 0px 0px 2px #4B47FF;
+            border-radius: 10px;
+            margin-bottom: 32px;
+        }
+
+        textarea{
+            all: unset;
+            width: 620px;
+            height: 160px;
+            padding-left: 20px;
+            padding-right: 20px;
+            overflow-wrap: break-word;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px 2px #4B47FF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 16px;
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+    
+        textarea::-webkit-scrollbar-track {
+            background: #141d2f;
+            border-radius: 10px;
+            margin: 5px; /* Abstand oben */
+        }
+    
+        textarea::-webkit-scrollbar-thumb {
+            background-color: #141d2f;
+            border-radius: 10px;
+            border: 2px solid #00BEE8;
+        }
+    
+        textarea::-webkit-scrollbar-thumb:hover {
+            background-color: #555; /* Color when hovering over the scrollbar thumb */
+        }
+    
+        .checkbox{
+            @include flex(center, center);
+            @include font(400, 14px);
+            gap: 16px;
+
+            .custom-checkbox {
+                cursor: pointer;
+            }
+            
+            .custom-checkbox input {
+                position: absolute;
+                opacity: 0;
+                height: 0;
+                width: 0;
+            }
+            
+            .checkmark {
+                width: 18px;
+                height: 18px;
+                background-image: url('./../../assets/img/checkbox/check_box_outline_blank.png');
+                background-size: cover;
+                display: inline-block;
+                &:hover{
+                    box-shadow: 0 0 2px #00BEE8;
+                }
+            }
+            
+            .custom-checkbox input:checked + .checkmark {
+                background-image: url('./../../assets/img/checkbox/check_box.png');
+                box-shadow: 0 0 3px #00BEE8;
+            }
+
+            a{
+                color: #4B47FF;
+                
+                &:hover{
+                    color: #00BEE8;
+                }
+            }
+        }
+
+        button{
+            all: unset;
+            @include button1($width: 200px, $bg: #00BEE8, $bgh: #4B47FF);
+
+            &:disabled{
+                background-color: #555;
+                &:hover{
+                    margin-top: 44px;
+                    width: 200px;
+                    height: 58px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+}

@@ -1,1 +1,36 @@
-<p>contact works!</p>
+<div>
+    <div></div>
+    <h1>Contact</h1>
+</div>
+<div class="textAndMailFlex">
+    <div class="textFlex">
+        <h2>Got a problem to solve?</h2>
+        <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
+            your projects with my work.</p>
+        <div class="contactText">
+            <p>Need a Frontend developer?</p>
+            <a href="mailto:John-Broda@hotmail.com">Contact me!</a>
+        </div>
+    </div>
+    <form class="mailFlex" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
+
+        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email"
+            required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" placeholder="Your message" name="message"
+            required></textarea>
+
+        <div class="checkbox">
+            <label class="custom-checkbox">
+                <input type="checkbox" id="checkbox" required>
+                <span class="checkmark"></span>
+            </label>
+            <p> I've read the <a href="">privacy policy </a> and agree to the processing of my data as outlined.</p>
+        </div>
+
+            <button type="submit" [disabled]="!contactForm.valid">Send message</button>
+
+
+    </form>
+</div>
