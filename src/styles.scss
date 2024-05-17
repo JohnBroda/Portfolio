@@ -3,6 +3,10 @@
     src: url(./assets/fonts/poppins-v21-latin-regular.woff2);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: poppins;
     background-color: rgb(20,29,47);
@@ -10,8 +14,8 @@ body{
     height: 100vh;
     margin: 0px;
     color: white;
-    // overflow-x: hidden;
-    
+    overflow-x: hidden;
+
     a{
         color: white;
         text-decoration: none ;

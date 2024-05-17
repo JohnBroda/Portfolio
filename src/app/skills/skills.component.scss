@@ -1,7 +1,14 @@
 @import './../mixin.scss';
 
+.spacer{
+    color: #141d2f;
+    width: 1px;
+    height: 1px;
+    cursor: default;
+}
+
 .skillsFlex {
-    margin-top: 260px;
+    margin-top: 320px;
     @include flex(center, space-between);
 
 

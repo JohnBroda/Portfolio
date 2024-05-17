@@ -10,6 +10,7 @@
 .aboutMeFlex {
     margin-left: 100px;
     margin-top: 148px;
+    
     @include flex(center, space-between);
 
     h1{
