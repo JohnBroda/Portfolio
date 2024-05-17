@@ -36,6 +36,7 @@
 
         h1 {
             @include font(700, 90px);
+            margin-bottom: 35px
         }
     }
 
@@ -49,7 +50,22 @@
 
 span {
     @include flex(center, center);
-    margin-top: 35px;
+    text-align: center
+}
+
+.pgspan {
+    color: rgb(155, 154, 154);
+    font-size: 14px;
+    .pg {
+        color: rgb(155, 154, 154);
+        @include font(700, 15px);
+        margin-left: 8px;
+        margin-right: 8px;
+
+        &:hover {
+            color: #00BEE8
+        }
+    }
 }
 
 .TL {
@@ -69,7 +85,7 @@ span {
 }
 
 .TR {
-    @include flex(center, center,row-reverse);
+    @include flex(center, center, row-reverse);
 
     .TRText {
         margin-left: 35px;
