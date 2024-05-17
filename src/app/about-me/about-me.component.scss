@@ -50,3 +50,33 @@
         background-color: #00bee8;
     }
 }
+
+@media screen and (max-width: 1610px) {
+    .aboutMeFlex {
+        margin-left: 50px;
+    }
+    .line{
+        width: 100px !important;
+        height: 4px;
+        background-color: #00bee8;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+
+    .aboutMeFlex {
+        margin-left: 0px;
+        @include flex(center, center);
+    }
+
+    .line{
+        display: none;
+        width: 100px !important;
+        height: 4px;
+        background-color: #00bee8;
+    }
+
+    .aboutMeImg{
+        display: none;
+    }
+}

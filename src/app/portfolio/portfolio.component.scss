@@ -105,3 +105,59 @@ span {
     @include button1(136px, none, #00BEE8);
     box-shadow: 0px 0px 0px 1px #00BEE8;
 }
+
+@media screen and (max-width: 1270px) {
+    .portfolioFlex {
+        margin-top: 150px;
+    
+        .portfoliolineFlex {
+    
+            .line1 {
+                width: 30px;
+                margin-right: 12px;
+            }
+        }
+    
+        .line2 {
+            width: 30%;
+            margin-left: 12px;
+        }
+    }
+         
+    .TL {
+        @include flex(center, center, column-reverse);
+        margin-top: 80px;
+
+        img{
+            width: 50%;
+        }
+    
+        .TLText {
+            @include flex(center, center, column);
+            text-align: center;
+        }
+    }
+    
+    .TR {
+        @include flex(center, center, column-reverse);
+        margin-top: 80px;
+
+        img{
+            width: 50%;
+        }
+    
+        .TRText {
+            @include flex(center, center, column);
+            text-align: center;
+        }
+    }
+    
+    .test {
+        @include button1(152px, #4B47FF, #00BEE8);
+    }
+    
+    .github {
+        @include button1(136px, none, #00BEE8);
+        box-shadow: 0px 0px 0px 1px #00BEE8;
+    }
+}

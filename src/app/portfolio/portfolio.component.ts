@@ -26,7 +26,7 @@ export class PortfolioComponent {
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       imageUrl: './../../assets/img/portfolio/elpolloloco.png',
       serverLink: '',
-      gitLink:'https://github.com/Simon-Kral/join',
+      gitLink:'https://github.com/JohnBroda/El-Pollo-Loco',
     },
   ];
 }

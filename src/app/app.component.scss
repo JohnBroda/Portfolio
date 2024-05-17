@@ -1,7 +1,9 @@
 .content{
-    width: 1920px;
+    max-width: 1920px;
+    width: 100vw;
     position: relative;
     background-color: rgb(20,29,47);
     z-index: 2;
     overflow: hidden;
 }
+

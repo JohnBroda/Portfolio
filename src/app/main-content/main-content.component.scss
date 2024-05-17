@@ -33,3 +33,53 @@
 .backgroundObject6{
     @include bgobject(8 , 540px, 600px, 5000px, left,  0px, -1);
 }
+
+@media screen and (max-width: 1610px){
+    .backgroundObject1{
+        @include bgobject(4 , 740px, 640px, 150px, left, -70px, -2);
+    }    
+}
+
+@media screen and (max-width: 1270px) {
+    .backgroundObject1{
+        @include bgobject(4 , 740px, 640px, 150px, left, 15%, -2);
+    }
+    
+    .backgroundObject2{
+        @include bgobject(5 , 740px, 740px, 780px, right, -400px, 0);
+    }
+    
+    .backgroundObject4{
+        @include bgobject(6 , 540px, 690px, 3650px, left,  0px, -1);
+    }
+    
+    .backgroundObject5{
+        @include bgobject(7 , 440px, 1590px, 2350px, right,  0px, -1);
+    }
+    
+    .backgroundObject6{
+        @include bgobject(8 , 540px, 600px, 90%, left,  0px, -1);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .backgroundObject1{
+        @include bgobject(4 , 740px, 640px, 150px, left, 3%, -2);
+    }
+    
+    .backgroundObject2{
+        @include bgobject(5 , 740px, 740px, 1280px, right, -500px, 0);
+    }
+      
+    .backgroundObject4{
+        @include bgobject(6 , 540px, 690px, 4050px, left,  -150px, -1);
+    }
+    
+    .backgroundObject5{
+        @include bgobject(7 , 440px, 1590px, 2350px, right,  0px, -1);
+    }
+    
+    .backgroundObject6{
+        @include bgobject(8 , 540px, 600px, 91%, left,  0px, -1);
+    }
+}

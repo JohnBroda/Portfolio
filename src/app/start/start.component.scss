@@ -107,3 +107,84 @@
     }
 
 }
+
+@media screen and (max-width: 1610px) {
+    .startFlex {
+    
+        img {
+            margin-left: 50px;
+        }
+    
+        .iam {
+            @include font(400, 54px);
+            transform: rotate(270deg);
+        }
+    
+        .nameAndJob {
+            margin-right: 50px;
+
+            h1 {
+                @include font(700, 80px);
+            }
+
+            h2 {
+                @include font(400, 48px);
+            }
+        }
+    
+        .spacer {
+            margin-bottom: 160px;
+        }
+    }
+     
+}
+
+@media screen and (max-width: 1270px) {
+    .startFlex {
+        @include flex(center, center, column);
+    
+        img {
+            margin-left: 0px;
+        }
+    
+        .nameAndJobFlex {
+            @include flex(center);
+        }
+    
+        .iam {
+            @include font(400, 54px);
+            transform: rotate(270deg);
+        }
+    
+        .nameAndJob {
+            margin-right: 0px;
+            @include flex(start, center, column);
+    
+            h1 {
+                @include font(700, 80px);
+                height: 95px
+            }
+    
+            h2 {
+                @include font(400, 48px);
+                color: rgb(75, 71, 255);
+                height: 90px
+            }
+        }
+    
+        .letsTalk {
+            a {
+                
+            }
+        }
+    
+        .spacer {
+            margin-bottom: 50px;
+        }
+    }
+     
+    .scrollDown {
+        display: none;
+    }
+  
+}
