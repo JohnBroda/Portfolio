@@ -1,0 +1,13 @@
+@import './../mixin.scss';
+
+.im{
+    margin: 100px;
+
+    .title{
+        @include flex(center, space-between);
+
+        a {
+            @include backarrow()
+        }
+    }
+}

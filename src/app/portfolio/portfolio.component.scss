@@ -52,11 +52,11 @@ span {
     margin-top: 35px;
 }
 
-.join {
+.TL {
     @include flex(center, center);
     margin-top: 120px;
 
-    .joinText {
+    .TLText {
         @include flex(end, center, column);
         @include portfolio();
         text-align: end;
@@ -68,10 +68,10 @@ span {
     }
 }
 
-.elpolloloco {
-    @include flex(center, center);
+.TR {
+    @include flex(center, center,row-reverse);
 
-    .elpollolocoText {
+    .TRText {
         margin-left: 35px;
         @include portfolio(start);
 
