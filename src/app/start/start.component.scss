@@ -1,11 +1,5 @@
 @import './../mixin.scss';
 
-.bgcolors {
-    position: absolute;
-    top: 150px;
-    z-index: -3;
-}
-
 .startFlex {
     @include flex(center, space-between);
 

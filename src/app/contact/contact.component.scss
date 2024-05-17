@@ -3,7 +3,7 @@
 
 .contact {
     @include flex(center, start);
-    margin-top: 245px;
+    margin-top: 180px;
 
     h1 {
         @include font(700, 90px)

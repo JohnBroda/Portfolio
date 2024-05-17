@@ -1,0 +1,73 @@
+.backgroundObject1{
+    background-image: url(./../assets/img/background/bgcolors/4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 740px;
+    height: 640px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    z-index: -2;
+}
+
+.backgroundObject2{
+    background-image: url(./../assets/img/background/bgcolors/5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 740px;
+    height: 740px;
+    position: absolute;
+    top: 780px;
+    right: -400px;
+    z-index: 0;
+}
+
+.backgroundObject3{
+    background-image: url(./../assets/img/background/bgcolors/1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 620px;
+    position: absolute;
+    top: 2150px;
+    transform: rotate(50deg);
+    left: -300px;
+    z-index: -1;
+}
+
+.backgroundObject4{
+    background-image: url(./../assets/img/background/bgcolors/6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 690px;
+    position: absolute;
+    top: 3650px;
+    left: 0px;
+    z-index: -1;
+}
+
+.backgroundObject5{
+    background-image: url(./../assets/img/background/bgcolors/7.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 440px;
+    height: 1590px;
+    position: absolute;
+    top: 2350px;
+    right: 0px;
+    z-index: -1;
+}
+
+.backgroundObject6{
+    background-image: url(./../assets/img/background/bgcolors/8.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 600px;
+    position: absolute;
+    top: 5000px;
+
+    left: 0px;
+    z-index: -1;
+}
