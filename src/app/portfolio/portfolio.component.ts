@@ -15,7 +15,7 @@ export class PortfolioComponent {
       subtitle: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imageUrl: './../../assets/img/portfolio/join.png',
-      serverLink: '',
+      serverLink: 'http://john-broda.ch/Join/',
       gitLink:'https://github.com/Simon-Kral/join',
 
     },
@@ -25,7 +25,7 @@ export class PortfolioComponent {
       subtitle: 'JavaScript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       imageUrl: './../../assets/img/portfolio/elpolloloco.png',
-      serverLink: '',
+      serverLink: 'http://john-broda.ch/ElPolloLoco/',
       gitLink:'https://github.com/JohnBroda/El-Pollo-Loco',
     },
   ];
