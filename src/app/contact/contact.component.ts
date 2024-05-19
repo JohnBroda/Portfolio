@@ -23,7 +23,7 @@ export class ContactComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://john-broda.ch/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
