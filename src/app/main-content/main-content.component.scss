@@ -73,14 +73,14 @@
     .backgroundObject3{
         @include bgobject(1 , 540px, 640px, 2500px, left, -300px, -1);
     }
-
     .backgroundObject4{
-        @include bgobject(6 , 300px, 390px, 4250px, left,  0px, -1);
-
+        @include bgobject(6 , 300px, 390px, 75%, left,  0px, -1);
     }
-
     .backgroundObject5{
         @include bgobject(7 , 440px, 1590px, 2500px, right,  0px, -1);
+    }
+    .backgroundObject6{
+        @include bgobject(8 , 440px, 500px, 90%, left,  0px, -1);
     }
 }
 
@@ -94,7 +94,7 @@
     }
 
     .backgroundObject4{
-        @include bgobject(6 , 300px, 390px, 15%, left,  0px, -1);
+        @include bgobject(6 , 300px, 390px, 16%, left,  0px, -1);
 
     }
 }
