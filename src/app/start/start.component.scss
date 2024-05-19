@@ -53,7 +53,7 @@
     height: 1080px;
     position: absolute;
     top: 420px;
-    z-index: -1;
+    z-index: -2;
 }
 
 .scrollDown {
@@ -153,7 +153,6 @@
     
         .iam {
             @include font(400, 54px);
-            transform: rotate(270deg);
         }
     
         .nameAndJob {
@@ -180,4 +179,44 @@
         display: none;
     }
   
+}
+
+@media screen and (max-width: 800px) {
+    .startFlex {
+        
+        img {
+            width: 450.5px;
+            height: 675.75px;
+        }
+
+        .iam {
+            @include font(400, 32px);
+        }
+
+        .nameAndJob {
+            margin-right: 0px;
+    
+            h1 {
+                @include font(700, 45px);
+                height: 55px
+            }
+    
+            h2 {
+                @include font(400, 29px);
+                color: rgb(75, 71, 255);
+                height: 45px
+            }
+        }
+    }
+
+    .Vector {
+        top: 300px;
+    }
+
+    .sozial {
+   
+        a:nth-child(5) {
+            display: none;
+        }
+    }
 }

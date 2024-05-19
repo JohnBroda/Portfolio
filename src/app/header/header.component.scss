@@ -1,27 +1,112 @@
 @import './../mixin.scss';
 
-header{
+header {
     @include flex(center, space-between);
     height: 110px;
 
-    .name{
+    .name {
         @include font(700, 48px);
         margin-left: 100px;
-        span{
+
+        span {
             color: #00BEE8;
         }
     }
 
-    a:nth-child(3){
+    a:nth-child(3) {
         margin-right: 100px;
     }
 
-    a{
+    a {
         margin: 20px;
         font-size: 23px;
+
+        &:hover {
+            color: rgb(0, 190, 232);
+            text-decoration: underline rgb(75, 71, 255);
+        }
+    }
+}
+
+@media screen and (max-width: 1610px) {
+    header {
+        .name {
+            margin-left: 50px;
+        }
+
+        a:nth-child(3) {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 801px){
+    .burgermenu{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .burger{
+        @include flex(center, space-between, column);
+        margin-right: 25px;
+        width: 40px;
+        height: 32px;
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+        cursor: pointer;
+
+        .line{
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
         &:hover{
-            color: rgb(0,190,232);
-            text-decoration: underline rgb(75,71,255);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    .burgerOpen{
+        border-radius: 10px 10px 0px 0px !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .burgermenu {
+        position: absolute;
+        @include flex(center, center, column);
+        right: 25px;
+        top: 81px;
+
+        a:nth-child(3) {
+            margin-right: 0px;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        a:nth-child(1){
+            border-radius: 10px 0px 0px 0px;
+        }
+
+        a {
+            @include flex(center, center);
+            margin: 0px;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 200px;
+            height: 55px;
+            transition: 0.1s;
+
+            &:hover {
+                @include font(700, 24px);
+                background-color: rgba(0, 0, 0, 0.6);
+                color: rgb(0, 190, 232);
+                text-decoration: none;
+            }
         }
     }
 

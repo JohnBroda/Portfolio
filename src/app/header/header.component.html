@@ -3,7 +3,19 @@
         Joh<span>n</span>
     </div>
 
-    <div>
+    <div class="burger" id="burger" [ngClass]="{'burgerOpen': isMenuOpen}" (click)="openBurgerMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="burgermenu" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}" id="burgermenu">
+        <a href="#about-me">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+    </div>
+
+    <div class="menu">
         <a href="#about-me">About me</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
