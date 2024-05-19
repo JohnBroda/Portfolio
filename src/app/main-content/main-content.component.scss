@@ -83,3 +83,18 @@
         @include bgobject(7 , 440px, 1590px, 2500px, right,  0px, -1);
     }
 }
+
+@media screen and (max-width: 450px) {
+    .backgroundObject1{
+        @include bgobject(4 , 480px, 470px, 400px, left, 50%, -2);
+    }
+
+    .backgroundObject3{
+        @include bgobject(1 , 350px, 400px, 46%, left, -100px, -1);
+    }
+
+    .backgroundObject4{
+        @include bgobject(6 , 300px, 390px, 15%, left,  0px, -1);
+
+    }
+}

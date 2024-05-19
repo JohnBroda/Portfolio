@@ -90,7 +90,18 @@
         }
     
         .aboutMe {
-            width: 380px;     
+            width: 80vw;     
         } 
+    }
+}
+
+@media screen and (max-width: 450px){
+    .aboutMeFlex {
+        margin-left: 0px;    
+        margin-top: 40px;
+    
+        h1{
+            @include font(700, 42px);
+        }
     }
 }

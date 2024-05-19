@@ -204,14 +204,61 @@
                 text-align: end;
 
                 h1 {
-                    @include font(700, 60px !important);
+                    font-size: 60px !important;
                     margin-bottom: 31px;
                 }
 
                 .skillsSpace {
                     margin-right: 10px !important;
-                    width: 400px !important;
+                    width: 80vw !important;
 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .skillsFlex {
+        margin-top: 40px;
+        img{
+            width: 10vw;
+        }
+        .skillIcons {
+            @include flex(center, center, row);
+            .images0to3 {
+                @include flex(center, space-between, column);
+                width: 32vw !important;
+                height: 350px;
+                margin-top: 0px;
+            }
+    
+            .images4to7 {
+                @include flex(center, space-between, column);
+                width: 32vw !important;
+                height: 360px;
+                padding-bottom: 6px;
+                margin-top: 0px;
+            }
+    
+            .images8to9 {
+                @include flex(center, start, column);
+                width: 32vw !important;
+                height: 350px;
+                padding-top: 10px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .skillTextFlex {
+        .line {
+            margin-top: 30px !important;
+        }
+        .getintouch {
+            .skills {
+                h1 {
+                    font-size: 42px !important;
                 }
             }
         }

@@ -220,3 +220,45 @@
         }
     }
 }
+
+@media screen and (max-width: 450px){
+    .startFlex {
+        
+        img {
+            width: 315.35px;
+            height: 473.025px;
+        }
+
+        .iam {
+            @include font(400, 30px);
+            height: 20px
+        }
+
+        .nameAndJob {
+            margin-right: 14px;
+            h1 {
+                @include font(700, 42px);
+                height: 50px
+            }
+    
+            h2 {
+                @include font(400, 22px);
+                height: 40px
+            }
+        }
+    }
+
+    .Vector {
+        top: 100px;
+    }
+
+    .sozial {
+        gap: 24px;
+        .placeholder {
+            width: 70px;
+        }
+        a:nth-child(5) {
+            display: none;
+        }
+    }
+}
