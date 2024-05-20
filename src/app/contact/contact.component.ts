@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -5,21 +6,22 @@ import { FormsModule, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   showErrorMessage: boolean = false;
-  mailTest:boolean = true;
+  mailTest: boolean = true;
+  emailSent: boolean = false;
 
   http = inject(HttpClient);
 
-  contactData={
+  contactData = {
     name: "",
     email: "",
     message: "",
-    acceptedPrivacyPolicy: false 
+    acceptedPrivacyPolicy: false
   }
 
   post = {
@@ -40,6 +42,10 @@ export class ContactComponent {
           next: (response) => {
 
             ngForm.resetForm();
+            this.emailSent = true;
+            setTimeout(() => {
+              this.emailSent = false;
+            }, 2000);
           },
           error: (error) => {
             console.error(error);
@@ -48,5 +54,4 @@ export class ContactComponent {
         });
     }
   }
-
 }
