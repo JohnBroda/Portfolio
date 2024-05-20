@@ -16,7 +16,7 @@
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
 
         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email"
-            required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}">
 
         <textarea #message="ngModel" [(ngModel)]="contactData.message" placeholder="Your message" name="message"
             required></textarea>
