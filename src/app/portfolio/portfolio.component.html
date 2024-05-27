@@ -1,28 +1,33 @@
-<div class="portfolioFlex">
-    <div class="portfoliolineFlex">
-        <div class="line1"></div>
-        <h1>
-            Portfolio
-        </h1>
+<div class="portfolioPosition">
+    <div class="portfolioSpacer"></div>
+    <div class="portfolioFlex">
+        <div class="portfoliolineFlex">
+            <div class="line1"></div>
+            <h1>
+                Portfolio
+            </h1>
+        </div>
+        <div class="line2"></div>
+        <div class="Placeholder"></div>
     </div>
-    <div class="line2"></div>
-</div>
-<span>
-    Explore a selection of my work here - Interact with projects to see my skills in action.
-</span>
-<span class="pgspan">My portfolio was developed using Angular. Here's the corresponding <a href="https://github.com/JohnBroda/Portfolio" class="pg">GitHub</a> repository.</span>
+    <span>
+        Explore a selection of my work here - Interact with projects to see my skills in action.
+    </span>
+    <span class="pgspan">My portfolio was developed using Angular. Here's the corresponding <a
+            href="https://github.com/JohnBroda/Portfolio" class="pg">GitHub</a> repository.</span>
 
-@for(pfproject of portfolioItems; track pfproject;){
+    @for(pfproject of portfolioItems; track pfproject;){
     <div class="{{ [pfproject.direction] }}">
         <div class="{{ [pfproject.direction] }}Text">
             <h2>{{ [pfproject.title] }}</h2>
             <h3>{{ [pfproject.subtitle] }}</h3>
             <p>{{ [pfproject.description] }}</p>
             <div class="link">
-                <a href="{{ [pfproject.serverLink] }}"class="test" target="_blank">Live test</a>
-                <a href="{{ [pfproject.gitLink] }}"class="github" target="_blank">Github</a>
+                <a href="{{ [pfproject.serverLink] }}" class="test" target="_blank">Live test</a>
+                <a href="{{ [pfproject.gitLink] }}" class="github" target="_blank">Github</a>
             </div>
         </div>
         <img src="{{ [pfproject.imageUrl] }}">
     </div>
     }
+</div>

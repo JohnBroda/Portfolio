@@ -1,8 +1,14 @@
 @import './../mixin.scss';
 
 header {
+    position: sticky;
     @include flex(center, space-between);
+    background-color: #141d2f;
+    top: 0px;
     height: 110px;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.267);
 
     .name {
         @include font(700, 48px);

@@ -10,15 +10,13 @@ html{
 }
 
 body{
-    @include flex(center, center, column);
     font-family: poppins;
-    background-color: rgb(3, 11, 27);
+    background-color: #141d2f;
     width: 100%;
     margin: 0px;
     color: white;
-    overflow-x: hidden;
-    filter: drop-shadow(0px 4px 8px black);
-    z-index: 0;
+    // overflow-x: hidden;
+    z-index: -3;
     a{
         color: white;
         text-decoration: none ;

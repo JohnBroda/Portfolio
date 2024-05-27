@@ -14,6 +14,7 @@
 @mixin button1($width: 165px, $bg: #00BEE8, $bgh: #4B47FF) {
     @include flex();
     @include font(400, 23px);
+    z-index: 10;
     margin-top: 44px;
     background-color: $bg;
     width: $width;
@@ -23,11 +24,10 @@
     cursor: pointer;
 
     &:hover {
-        margin-top: 34px;
-        font-weight: 600;
+        margin-top: 39px;
         background-color: $bgh;
         width: $width+10;
-        height: 68px;
+        height: 63px;
     }
 }
 
@@ -47,4 +47,12 @@
                 height: 55px;
                 width: 55px;
             }
+}
+
+@media screen and (max-width: 1920px) {
+
+    .Placeholder{
+        display: none;
+    }
+
 }

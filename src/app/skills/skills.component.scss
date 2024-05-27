@@ -1,14 +1,9 @@
 @import './../mixin.scss';
 
-.spacer {
-    color: #141d2f;
-    width: 1px;
-    height: 1px;
-    cursor: default;
-}
-
 .skillsFlex {
-    margin-top: 320px;
+    position: relative;
+    height: 100vh;
+    z-index: 6;
     @include flex(center, space-between);
 
 
@@ -69,6 +64,15 @@
         .line {
             margin-top: 70px;
             width: 60px;
+            height: 2px;
+            background-color: rgb(75, 71, 255);
+        }
+
+        .Placeholder{
+            position: absolute;
+            margin-top: 70px;
+            width: 100vw;
+            right: -100vw;
             height: 2px;
             background-color: rgb(75, 71, 255);
         }

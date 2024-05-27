@@ -1,8 +1,10 @@
 @import './../mixin.scss';
 
 .aboutMeFlex {
+    position: relative;
+    z-index: 5;
+    height: 100vh;
     margin-left: 100px;
-    margin-top: 148px;
     
     @include flex(center, space-between);
 
@@ -46,6 +48,13 @@
 
     .line{
         width: 260px;
+        height: 4px;
+        background-color: #00bee8;
+    }
+    .Placeholder{
+        position: absolute;
+        right: -100vw;
+        width: 100vw;
         height: 4px;
         background-color: #00bee8;
     }

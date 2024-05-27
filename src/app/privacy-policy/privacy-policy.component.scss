@@ -1,7 +1,9 @@
 @import './../mixin.scss';
 
 .pp{
+    position: relative;
     margin: 100px;
+    z-index: 20;
 
     .title{
         @include flex(center, space-between);

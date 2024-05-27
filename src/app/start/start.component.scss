@@ -1,10 +1,16 @@
 @import './../mixin.scss';
 
+.startPosition{
+    height: 100vh;
+    position: relative;
+}
+
 .startFlex {
     @include flex(center, space-between);
+    height: 82%;
 
     img {
-        z-index: -2;
+        z-index: 3;
         margin-left: 180px;
         width: 530px;
         height: 795px;
@@ -17,11 +23,13 @@
     .iam {
         @include font(400, 64px);
         transform: rotate(270deg);
+        z-index: 10;
     }
 
     .nameAndJob {
         margin-right: 120px;
         @include flex(start, center, column);
+        z-index: 10;
 
         h1 {
             @include font(700, 90px);
@@ -48,19 +56,12 @@
     }
 }
 
-.Vector {
-    width: 1920px;
-    height: 1080px;
-    position: absolute;
-    top: 420px;
-    z-index: -2;
-}
-
 .scrollDown {
     @include flex(center, center, column);
     position: absolute;
     right: 76px;
-    top: 780px;
+    top: 70%;
+    z-index: 6;
 
     p {
         @include font(400, 23px);
@@ -70,12 +71,23 @@
 }
 
 .sozial {
+    position: absolute;
     @include flex(center, start);
+    top: 82%;
     gap: 40px;
     width: 700px;
     height: 40px;
+    z-index: 6;
 
     .placeholder {
+        position: absolute;
+        height: 2px;
+        width: 100vw;
+        left: -100vw;
+        background-color: #4B47FF;
+    }
+
+    .line{
         height: 2px;
         width: 100px;
         background-color: #4B47FF;
@@ -110,7 +122,6 @@
 
 @media screen and (max-width: 1610px) {
     .startFlex {
-    
         img {
             margin-left: 50px;
         }
@@ -141,6 +152,7 @@
 
 @media screen and (max-width: 1270px) {
     .startFlex {
+        margin-top: 190px;
         @include flex(center, center, column);
     
         img {
@@ -209,10 +221,6 @@
         }
     }
 
-    .Vector {
-        top: 300px;
-    }
-
     .sozial {
    
         a:nth-child(5) {
@@ -246,10 +254,6 @@
                 height: 40px
             }
         }
-    }
-
-    .Vector {
-        top: 100px;
     }
 
     .sozial {
