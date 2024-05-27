@@ -77,7 +77,7 @@
     }
     
     .backgroundObject6{
-        @include bgobject(8 , 440px, 850px, 93%, left, -200px);
+        @include bgobject(8 , 440px, 850px, 92%, left, -200px);
         transform: rotate(90deg);
     }
 }
@@ -86,74 +86,64 @@
     .backgroundObject1{
         @include bgobject(4 , 740px, 640px, 150px, left, -70px);
         z-index: 2;
-    }    
+    }   
+    
+    .Vector {
+        top:44%;
+    }
 }
 
 @media screen and (max-width: 1270px) {
     .backgroundObject1{
-        @include bgobject(4 , 740px, 640px, 550px, left, 50%);
+        @include bgobject(4 , 740px, 640px, 350px, left, 50%);
         transform: translate(-50%, -50%);
         z-index: 2;
     }
 
     .Vector {
-        width: 100vw !important;
         height: 500px;
-        position: absolute;
-        top:720px;
-        left: 0px;
-        z-index: 4;
+        top:55%;
     }
            
-    .backgroundObject6{
-        @include bgobject(8 , 540px, 600px, 90%, left,  0px);
-    }
-}
-
-@media screen and (max-width: 1050px) {  
-    .backgroundObject2{
-        @include bgobject(5 , 740px, 740px, 1280px, right, -500px);
-    }
-      
-    .backgroundObject4{
-        @include bgobject(6 , 540px, 690px, 4050px, left,  -150px);
-    }
-    
-    .backgroundObject5{
-        @include bgobject(7 , 440px, 1590px, 2350px, right,  0px);
-    }
-    
-    .backgroundObject6{
-        @include bgobject(8 , 540px, 600px, 90%, left,  0px);
-    }
 }
 
 @media screen and (max-width: 800px) {
-    .backgroundObject3{
-        @include bgobject(1 , 540px, 640px, 2500px, left, -300px);
+    .Vector {
+        height: 200px;
+        top:60%;
     }
+
     .backgroundObject4{
-        @include bgobject(6 , 300px, 390px, 75%, left,  0px);
+        @include bgobject(6 , 440px, 400px, 70%, left,  -200px);
     }
     .backgroundObject5{
-        @include bgobject(7 , 440px, 1590px, 2500px, right,  0px);
+        @include bgobject(7 , 540px, 590px, 56%, right,  -200px);
     }
     .backgroundObject6{
-        @include bgobject(8 , 440px, 500px, 90%, left,  0px);
+        @include bgobject(8 , 440px, 850px, 93%, left, -200px);
+        transform: rotate(90deg);
     }
 }
 
 @media screen and (max-width: 450px) {
     .backgroundObject1{
-        @include bgobject(4 , 480px, 470px, 400px, left, 50%);
+        @include bgobject(4 , 540px, 540px, 300px, left, 50%);
+        z-index: 2;
     }
 
-    .backgroundObject3{
-        @include bgobject(1 , 350px, 400px, 46%, left, -100px);
+    .Vector {
+        height: 180px;
+        top:55%;
     }
+}
 
-    .backgroundObject4{
-        @include bgobject(6 , 300px, 390px, 16%, left,  0px);
-
+@media screen and (max-width: 450px) and (max-height: 780px) {
+    .backgroundObject1{
+        @include bgobject(4 , 440px, 440px, 200px, left, 50%);
+        z-index: 2;
+    }
+    .Vector {
+        height: 180px;
+        top:56%;
     }
 }

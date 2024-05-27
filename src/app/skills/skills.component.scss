@@ -6,7 +6,6 @@
     z-index: 6;
     @include flex(center, space-between);
 
-
     .skillIcons {
         @include flex(center, start, column);
         margin-left: 100px;
@@ -60,6 +59,7 @@
 
     .skillTextFlex {
         @include flex(start);
+        margin-top: 110px;
 
         .line {
             margin-top: 70px;

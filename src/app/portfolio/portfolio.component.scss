@@ -33,16 +33,15 @@
     z-index: 6;
     height: 100%;
 
-    .portfolioSpacer {
-        height: 110px
-    }
 }
 
 .portfolioFlex {
     @include flex(center, end);
 
+
     .portfoliolineFlex {
         @include flex(center, center);
+        margin-top: 110px;
 
         .line1 {
             width: 109px;
@@ -53,7 +52,7 @@
 
         h1 {
             @include font(700, 90px);
-            margin-bottom: 35px
+            margin-bottom: 35px;
         }
     }
 
@@ -62,6 +61,7 @@
         height: 2px;
         margin-left: 36px;
         background-color: rgb(75, 71, 255);
+        margin-top: 110px;
     }
 
     .Placeholder {

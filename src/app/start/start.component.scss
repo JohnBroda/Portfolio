@@ -1,6 +1,6 @@
 @import './../mixin.scss';
 
-.startPosition{
+.startPosition {
     height: 100vh;
     position: relative;
 }
@@ -73,7 +73,7 @@
 .sozial {
     position: absolute;
     @include flex(center, start);
-    top: 82%;
+    top: 81%;
     gap: 40px;
     width: 700px;
     height: 40px;
@@ -87,13 +87,13 @@
         background-color: #4B47FF;
     }
 
-    .line{
+    .line {
         height: 2px;
         width: 100px;
         background-color: #4B47FF;
     }
 
-    a:nth-child(5) {
+    a:nth-child(6) {
         @include font(400, 23px);
         transition: 0.1s;
 
@@ -122,15 +122,19 @@
 
 @media screen and (max-width: 1610px) {
     .startFlex {
+        height: 80%;
+
         img {
             margin-left: 50px;
+            width: 480px;
+            height: 715px;
         }
-    
+
         .iam {
             @include font(400, 54px);
             transform: rotate(270deg);
         }
-    
+
         .nameAndJob {
             margin-right: 50px;
 
@@ -142,64 +146,79 @@
                 @include font(400, 48px);
             }
         }
-    
+
         .spacer {
             margin-bottom: 160px;
         }
     }
-     
+
 }
 
 @media screen and (max-width: 1270px) {
     .startFlex {
-        margin-top: 190px;
         @include flex(center, center, column);
-    
+        height: 85%;
+
         img {
             margin-left: 0px;
+            width: 371px;
+            height: 556px;
         }
-    
+
         .nameAndJobFlex {
             @include flex(center);
         }
-    
+
         .iam {
-            @include font(400, 54px);
+            @include font(400, 45px);
         }
-    
+
         .nameAndJob {
             margin-right: 0px;
             @include flex(start, center, column);
-    
+
             h1 {
-                @include font(700, 80px);
-                height: 95px
+                @include font(700, 70px);
+                height: 80px
             }
-    
+
             h2 {
-                @include font(400, 48px);
+                @include font(400, 40px);
                 color: rgb(75, 71, 255);
-                height: 90px
+                height: 70px
             }
         }
+
         .spacer {
-            margin-bottom: 50px;
+            @include flex(center, center, row);
+            margin-bottom: 0px;
+        }
+
+        .letsTalk {
+            a {
+                margin-top: 0px !important;
+                margin-left: 50px;
+
+                &:hover {
+                    margin-left: 40px;
+                }
+            }
         }
     }
-     
+
+    .sozial {
+        top: 80%;
+    }
+
     .scrollDown {
         display: none;
     }
-  
+
 }
 
 @media screen and (max-width: 800px) {
     .startFlex {
-        
-        img {
-            width: 450.5px;
-            height: 675.75px;
-        }
+        height: 78%;
 
         .iam {
             @include font(400, 32px);
@@ -207,12 +226,12 @@
 
         .nameAndJob {
             margin-right: 0px;
-    
+
             h1 {
                 @include font(700, 45px);
                 height: 55px
             }
-    
+
             h2 {
                 @include font(400, 29px);
                 color: rgb(75, 71, 255);
@@ -221,48 +240,113 @@
         }
     }
 
+    .spacer {
+        @include flex(center, center, column !important);
+    }
+
+    .letsTalk {
+        height: 80px;
+
+        a {
+            margin-left: 0px !important;
+        }
+    }
+
     .sozial {
-   
-        a:nth-child(5) {
+
+        a:nth-child(6) {
             display: none;
         }
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
     .startFlex {
-        
+        height: 75%;
+
         img {
             width: 315.35px;
             height: 473.025px;
         }
 
-        .iam {
-            @include font(400, 30px);
-            height: 20px
-        }
-
-        .nameAndJob {
-            margin-right: 14px;
-            h1 {
-                @include font(700, 42px);
-                height: 50px
+        .nameAndJobFlex {
+            margin-top: 10%;
+            .iam {
+                @include font(400, 30px);
+                height: 20px
             }
-    
-            h2 {
-                @include font(400, 22px);
-                height: 40px
+
+            .nameAndJob {
+                margin-right: 14px;
+
+                h1 {
+                    @include font(700, 42px);
+                    height: 50px
+                }
+
+                h2 {
+                    @include font(400, 22px);
+                    height: 40px
+                }
             }
         }
     }
 
     .sozial {
         gap: 24px;
+
         .placeholder {
             width: 70px;
         }
-        a:nth-child(5) {
-            display: none;
+    }
+}
+
+@media screen and (max-width: 450px) and (max-height: 780px) {
+    .startFlex {
+        height: 75%;
+
+        img {
+            width: 230.35px;
+            height: 350.025px;
+        }
+
+        .nameAndJobFlex {
+            margin-top: 0%;
+            .iam {
+                @include font(400, 28px);
+                height: 20px
+            }
+
+            .nameAndJob {
+                margin-right: 14px;
+
+                h1 {
+                    @include font(700, 40px);
+                    height: 50px
+                }
+
+                h2 {
+                    @include font(400, 20px);
+                    height: 38px
+                }
+            }
+        }
+    }
+
+    .letsTalk {
+        height: 60px;
+
+        a {
+            height: 50px !important;
+        }
+    }
+
+    .sozial {
+        gap: 24px;
+        top: 77%;
+
+        .placeholder {
+            width: 70px;
         }
     }
 }

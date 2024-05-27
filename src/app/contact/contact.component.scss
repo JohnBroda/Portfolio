@@ -6,17 +6,15 @@
     width: 100%;
     z-index: 6;
     @include flex(none, center, column);
-    .contactSpacer{
-        height: 110px
-    }
+
 }
 
 .contact {
     @include flex(center, start);
     
-
     h1 {
-        @include font(700, 90px)
+        @include font(700, 90px);
+        margin-top: 110px;
     }
 
     .line {
@@ -24,6 +22,7 @@
         height: 2px;
         margin-right: 50px;
         background-color: rgb(75, 71, 255);
+        margin-top: 110px;
     }
 
     .Placeholder{
@@ -233,9 +232,11 @@
 
 @media screen and (max-width: 1270px) {
 
-    .contact {
-        margin-top: 150px;
+    .contactPosition{
+        margin-top: 200px;
+    }
 
+    .contact {
         .line {
             margin-right: 12px;
         }
@@ -264,7 +265,8 @@
 @media screen and (max-width: 800px) {
     .contact {
         h1 {
-            @include font(700, 60px)
+            @include font(700, 60px);
+            margin-top: 110px;
         }
 
         .line {
@@ -294,6 +296,7 @@
 
     .goUp {
         margin-top: 30px;
+        margin-bottom: 150px;
 
         a {
             margin-right: 50px;
@@ -306,7 +309,8 @@
         margin-top: 60px;
 
         h1 {
-            @include font(700, 42px)
+            @include font(700, 42px);
+            margin-top: 110px;
         }
 
         .line {
@@ -320,6 +324,7 @@
 
     .goUp {
         margin-top: 30px;
+        margin-bottom: 280px;
 
         a {
             margin-right: 20px;
