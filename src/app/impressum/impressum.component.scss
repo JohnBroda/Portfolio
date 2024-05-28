@@ -2,6 +2,7 @@
 
 .im{
     margin: 100px;
+    margin-top: 120px;
 
     .title{
         @include flex(center, space-between);
@@ -15,5 +16,6 @@
 @media screen and (max-width: 800px) {
     .im{
     margin: 25px;
+    margin-top: 120px;
     }
 }

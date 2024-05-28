@@ -1,11 +1,12 @@
 @import './../mixin.scss';
 
-.pp{
+.pp {
     position: relative;
     margin: 100px;
+    margin-top: 120px;
     z-index: 20;
 
-    .title{
+    .title {
         @include flex(center, space-between);
 
         a {
@@ -15,7 +16,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .pp{
-    margin: 25px;
+    .pp {
+        margin-top: 120px;
     }
 }

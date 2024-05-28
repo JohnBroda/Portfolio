@@ -6,6 +6,7 @@
 }
 
 .startFlex {
+    margin-top: 110px;
     @include flex(center, space-between);
     height: 82%;
 
@@ -369,6 +370,15 @@
 
         .placeholder {
             width: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) and (max-height: 720px){
+    .startFlex {
+        img {
+            width: 230.35px;
+            height: 350.025px;
         }
     }
 }

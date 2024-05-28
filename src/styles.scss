@@ -12,10 +12,10 @@ html{
 body{
     font-family: poppins;
     background-color: #141d2f;
-    width: 100%;
+    width: 100vw;
     margin: 0px;
     color: white;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     z-index: -3;
     a{
         color: white;
@@ -40,4 +40,10 @@ body{
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+@media screen and (max-width: 1270px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }

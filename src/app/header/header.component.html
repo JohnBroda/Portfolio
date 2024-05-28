@@ -1,41 +1,47 @@
 <header>
-    <div class="nameAndLanguage">
-        <div class="name">
-            Joh<span>n</span>
+    <div class="headerposition">
+        <div class="nameAndLanguage">
+            <div class="name">
+                Joh<span>n</span>
+            </div>
+            <div class="language" (click)="changeLanguage()">
+                <img src="./../../assets/img/icons/german.jpg"
+                    [ngStyle]="{'filter': language.currentLanguage ? 'grayscale(100%)' : 'none'}">
+                <img src="./../../assets/img/icons/english.jpg"
+                    [ngStyle]="{'filter': !language.currentLanguage ? 'grayscale(100%)' : 'none'}">
+            </div>
         </div>
-        <div class="language" (click)="changeLanguage()">
-            <img src="./../../assets/img/icons/german.jpg" [ngStyle]="{'filter': language.currentLanguage ? 'grayscale(100%)' : 'none'}">
-            <img src="./../../assets/img/icons/english.jpg" [ngStyle]="{'filter': !language.currentLanguage ? 'grayscale(100%)' : 'none'}">
+
+        <div class="burger" id="burger" [ngClass]="{'burgerOpen': isMenuOpen}" (click)="openBurgerMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-    </div>
 
-    <div class="burger" id="burger" [ngClass]="{'burgerOpen': isMenuOpen}" (click)="openBurgerMenu()">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+        <div class="burgermenu" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}" id="burgermenu"
+            *ngIf="language.currentLanguage">
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+        </div>
 
-    <div class="burgermenu" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}" id="burgermenu" *ngIf="language.currentLanguage">
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-    </div>
-
-    <div class="burgermenu" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}" id="burgermenu" *ngIf="!language.currentLanguage">
-        <a href="#about-me">Über mich</a>
-        <a href="#skills">Fähigkeiten</a>
-        <a href="#portfolio">Portfolio</a>
-    </div>
+        <div class="burgermenu" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}" id="burgermenu"
+            *ngIf="!language.currentLanguage">
+            <a href="#about-me">Über mich</a>
+            <a href="#skills">Fähigkeiten</a>
+            <a href="#portfolio">Portfolio</a>
+        </div>
 
 
-    <div class="menu" *ngIf="language.currentLanguage">
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-    </div>
-    <div class="menu" *ngIf="!language.currentLanguage">
-        <a href="#about-me">Über mich</a>
-        <a href="#skills">Fähigkeiten</a>
-        <a href="#portfolio">Portfolio</a>
+        <div class="menu" *ngIf="language.currentLanguage">
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+        </div>
+        <div class="menu" *ngIf="!language.currentLanguage">
+            <a href="#about-me">Über mich</a>
+            <a href="#skills">Fähigkeiten</a>
+            <a href="#portfolio">Portfolio</a>
+        </div>
     </div>
 </header>

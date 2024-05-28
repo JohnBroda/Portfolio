@@ -346,6 +346,21 @@
 }
 
 @media screen and (max-width: 450px) {
+    .validName {
+        font-size: 10px;
+        top: -35px;
+    }
+    
+    .validEmail {
+        font-size: 10px;
+        top: 50px;
+    }
+    
+    .validMessage {
+        font-size: 10px;
+        top: 134px;
+    }
+
     .contact {
         margin-top: 160px;
 

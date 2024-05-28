@@ -31,7 +31,7 @@
                 <p class="validName" *ngIf="!name.valid && name.touched">Please enter your name!</p>
 
                 <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
-                    placeholder="Your email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
                 <p class="validEmail" *ngIf="!email.valid && email.touched">Please enter a valid email!</p>
 
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" placeholder="Your message" name="message"
@@ -42,12 +42,14 @@
             <div *ngIf="!language.currentLanguage">
                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Dein Name"
                     required>
-
+                    <p class="validName" *ngIf="!name.valid && name.touched">Bitte geben Sie einen Namen ein!</p>
                 <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
-                    placeholder="Deine Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    placeholder="Deine Email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                    <p class="validEmail" *ngIf="!email.valid && email.touched">Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>
 
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" placeholder="Deine Naricht"
                     name="message" required></textarea>
+                    <p class="validMessage" *ngIf="!message.valid && message.touched">Bitte geben Sie Ihre Nachricht ein!</p>
             </div>
 
 
