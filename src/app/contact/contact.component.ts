@@ -13,9 +13,6 @@ import { LanguageService } from '../language.service';
 })
 export class ContactComponent {
   language = inject(LanguageService);
-
-  showErrorMessage: boolean = false;
-  mailTest: boolean = true;
   emailSent: boolean = false;
 
   http = inject(HttpClient);
@@ -39,7 +36,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && 0) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -55,13 +52,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    }
-    else if(ngForm.submitted && ngForm.form.valid){
-      ngForm.resetForm();
-      this.emailSent = true;
-      setTimeout(() => {
-        this.emailSent = false;
-      }, 2000);
     }
   }
 }

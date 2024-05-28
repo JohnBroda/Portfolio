@@ -24,28 +24,31 @@
             </div>
         </div>
         <form class="mailFlex" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <input *ngIf="language.currentLanguage" #name="ngModel" [(ngModel)]="contactData.name" type="text"
-                name="name" placeholder="Your name" required>
+            <div *ngIf="language.currentLanguage">
 
-            <input *ngIf="language.currentLanguage" #email="ngModel" [(ngModel)]="contactData.email" type="email"
-                name="email" placeholder="Your email" required
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name"
+                    required>
+                <p class="validName" *ngIf="!name.valid && name.touched">Please enter your name!</p>
 
-            <textarea *ngIf="language.currentLanguage" #message="ngModel" [(ngModel)]="contactData.message"
-                placeholder="Your message" name="message" required></textarea>
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
+                    placeholder="Your email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <p class="validEmail" *ngIf="!email.valid && email.touched">Please enter a valid email!</p>
 
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" placeholder="Your message" name="message"
+                    required></textarea>
+                <p class="validMessage" *ngIf="!message.valid && message.touched">Please enter your message!</p>
+            </div>
 
+            <div *ngIf="!language.currentLanguage">
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Dein Name"
+                    required>
 
-            <input *ngIf="!language.currentLanguage" #name="ngModel" [(ngModel)]="contactData.name" type="text"
-                name="name" placeholder="Dein Name" required>
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
+                    placeholder="Deine Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
 
-            <input *ngIf="!language.currentLanguage" #email="ngModel" [(ngModel)]="contactData.email" type="email"
-                name="email" placeholder="Deine Email" required
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-
-            <textarea *ngIf="!language.currentLanguage" #message="ngModel" [(ngModel)]="contactData.message"
-                placeholder="Deine Naricht" name="message" required></textarea>
-
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" placeholder="Deine Naricht"
+                    name="message" required></textarea>
+            </div>
 
 
             <div class="checkbox">
@@ -64,16 +67,20 @@
 
 
             <div *ngIf="!emailSent">
-                <button type="submit" [disabled]="!contactForm.valid" *ngIf="language.currentLanguage">Send message</button>
+                <button type="submit" [disabled]="!contactForm.valid" *ngIf="language.currentLanguage">Send
+                    message</button>
             </div>
             <div *ngIf="emailSent">
-                <button class="message" type="submit" *ngIf="language.currentLanguage">The email was sent successfully!</button>
+                <button class="message" type="submit" *ngIf="language.currentLanguage">The email was sent
+                    successfully!</button>
             </div>
             <div *ngIf="!emailSent">
-                <button type="submit" [disabled]="!contactForm.valid" *ngIf="!language.currentLanguage">Naricht senden</button>
+                <button type="submit" [disabled]="!contactForm.valid" *ngIf="!language.currentLanguage">Naricht
+                    senden</button>
             </div>
             <div *ngIf="emailSent">
-                <button class="message" type="submit" *ngIf="!language.currentLanguage">Die E-Mail wurde erfolgreich versendet!</button>
+                <button class="message" type="submit" *ngIf="!language.currentLanguage">Die E-Mail wurde erfolgreich
+                    versendet!</button>
             </div>
         </form>
     </div>
