@@ -3,22 +3,26 @@
         <img src="./../../assets/img/background/pfp2.1.png">
         <div class="spacer">
             <div class="nameAndJobFlex">
-                <h1 class="iam">
+                <h1 class="iam" *ngIf="language.currentLanguage">
                     I am
+                </h1>
+                <h1 class="iamDE" *ngIf="!language.currentLanguage">
+                    Ich bin
                 </h1>
                 <div class="nameAndJob">
                     <h1>John Broda</h1>
                     <h2>FRONTEND DEVELOPER</h2>
-
                 </div>
             </div>
             <div class="letsTalk">
-                <a href="#contact">Let's talk!</a>
+                <a href="#contact" *ngIf="language.currentLanguage">Let's talk!</a>
+                <a href="#contact" *ngIf="!language.currentLanguage">Reden wir!</a>
             </div>
         </div>
     </div>
     <div class="scrollDown">
-        <p>Scroll down</p>
+        <p *ngIf="language.currentLanguage">Scroll down</p>
+        <p *ngIf="!language.currentLanguage">Scroll runter</p>
         <img src="./../../assets/img/icons/arrow-down-line.png">
     </div>
     <div class="sozial">

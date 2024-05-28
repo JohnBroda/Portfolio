@@ -26,6 +26,12 @@
         z-index: 10;
     }
 
+    .iamDE{
+        @include font(400, 42px);
+        transform: rotate(270deg);
+        z-index: 10;
+    }
+
     .nameAndJob {
         margin-right: 120px;
         @include flex(start, center, column);
@@ -132,7 +138,10 @@
 
         .iam {
             @include font(400, 54px);
-            transform: rotate(270deg);
+        }
+
+        .iamDE {
+            @include font(400, 40px);
         }
 
         .nameAndJob {
@@ -171,6 +180,10 @@
 
         .iam {
             @include font(400, 45px);
+        }
+
+        .iamDE {
+            @include font(400, 30px);
         }
 
         .nameAndJob {
@@ -224,6 +237,10 @@
             @include font(400, 32px);
         }
 
+        .iamDE {
+            @include font(400, 20px);
+        }
+
         .nameAndJob {
             margin-right: 0px;
 
@@ -274,6 +291,11 @@
             .iam {
                 @include font(400, 30px);
                 height: 20px
+            }
+
+            .iamDE{
+                @include font(400, 18px);
+                height: 10px
             }
 
             .nameAndJob {

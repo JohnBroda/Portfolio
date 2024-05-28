@@ -1,23 +1,39 @@
 <div class="aboutMeFlex">
     <div>
-        <h1>
+        <h1 *ngIf="language.currentLanguage">
             About me
         </h1>
+        <h1 *ngIf="!language.currentLanguage">
+            Über mich
+        </h1>
         <div class="aboutMe">
-            <p>
+            <p *ngIf="language.currentLanguage">
                 Hello, my name is John Broda, and I live in Wald ZH in the Canton of Zurich. As a Frontend Developer, I
                 have experience in building websites and sophisticated web applications using JavaScript, TypeScript
                 and Angular. I'm excited to share my work with you.
             </p>
+            <p *ngIf="!language.currentLanguage">
+                Hallo, mein Name ist John Broda und ich lebe in Wald ZH im Kanton Zürich. Als Frontend-Entwickler habe
+                ich Erfahrung im Erstellen von Websites und anspruchsvollen Webanwendungen mit JavaScript, TypeScript
+                und Angular. Ich freue mich darauf, meine Arbeit mit Ihnen zu teilen.
+            </p>
             <div class="bulb">
                 <img src="./../../assets/img/icons/bulbdesktop.png">
-                <p>I've completed further training to enhance my skills in frontend development, where I had the
+                <p *ngIf="language.currentLanguage">I've completed further training to enhance my skills in frontend
+                    development, where I had the
                     opportunity to work on several web applications and collaborate on group projects.</p>
+                <p *ngIf="!language.currentLanguage">Ich habe Weiterbildungen abgeschlossen, um meine Fähigkeiten in der
+                    Frontend-Entwicklung zu verbessern. Dabei hatte ich die Gelegenheit, an mehreren Webanwendungen zu
+                    arbeiten und an Gruppenprojekten mitzuwirken.</p>
             </div>
             <div class="puzzle">
                 <img src="./../../assets/img/icons/puzzledesktop.png">
-                <p>I look forward to connecting with like-minded professionals and exploring new opportunities to create
+                <p *ngIf="language.currentLanguage">I look forward to connecting with like-minded professionals and
+                    exploring new opportunities to create
                     innovative digital experiences.
+                </p>
+                <p *ngIf="!language.currentLanguage">Ich freue mich darauf, mich mit gleichgesinnten Fachleuten zu
+                    vernetzen und neue Möglichkeiten zu erkunden, um innovative digitale Erlebnisse zu schaffen.
                 </p>
             </div>
         </div>

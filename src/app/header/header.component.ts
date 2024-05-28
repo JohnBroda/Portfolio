@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,8 @@ import { Component, HostListener } from '@angular/core';
 })
 
 export class HeaderComponent {
-  currentLanguage = true;
   isMenuOpen = false;
-
-
+  language = inject(LanguageService);
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
@@ -32,6 +31,6 @@ export class HeaderComponent {
   }
 
   changeLanguage(){
-    this.currentLanguage = !this.currentLanguage;
+    this.language.currentLanguage = !this.language.currentLanguage;
   }
 }

@@ -1,0 +1,13 @@
+.scroll-animation {
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 20;
+  }
+  
+  .visible {
+    margin-left: 0px !important;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 20;
+  }

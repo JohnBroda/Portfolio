@@ -29,14 +29,19 @@
         <div class="getintouch">
             <div class="skills">
                 <div class="skillsSpace">
-                    <h1>My skills</h1>
-                    <span>
+                    <h1 *ngIf="language.currentLanguage">My skills</h1>
+                    <h1 *ngIf="!language.currentLanguage">Meine Fähigkeiten</h1>
+                    <span *ngIf="language.currentLanguage">
                         I have grown my frontend developments skills that have allowed me to create different real
                         projects.
                     </span>
+                    <span *ngIf="!language.currentLanguage">
+                        Ich habe meine Fähigkeiten in der Frontend-Entwicklung kontinuierlich weiterentwickelt, was mir ermöglicht hat, verschiedene reale Projekte erfolgreich umzusetzen.
+                    </span>
                 </div>
             </div>
-            <a href="#contact">Get in touch</a>
+            <a href="#contact" *ngIf="language.currentLanguage">Get in touch</a>
+            <a href="#contact" *ngIf="!language.currentLanguage">Kontakt</a>
         </div>
         <div class="line"></div>
         <div class="Placeholder"></div>

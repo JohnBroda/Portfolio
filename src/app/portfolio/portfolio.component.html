@@ -9,12 +9,17 @@
         <div class="line2"></div>
         <div class="Placeholder"></div>
     </div>
-    <span>
+    <span *ngIf="language.currentLanguage">
         Explore a selection of my work here - Interact with projects to see my skills in action.
     </span>
-    <span class="pgspan">My portfolio was developed using Angular. Here's the corresponding <a
-            href="https://github.com/JohnBroda/Portfolio" class="pg">GitHub</a> repository.</span>
-
+    <span *ngIf="!language.currentLanguage">
+        Entdecken Sie hier eine Auswahl meiner Arbeit - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.
+    </span>
+    <span class="pgspan" *ngIf="language.currentLanguage">My portfolio was developed using Angular. Here's the
+        corresponding <a href="https://github.com/JohnBroda/Portfolio" class="pg">GitHub</a> repository.</span>
+    <span class="pgspan" *ngIf="!language.currentLanguage">Mein Portfolio wurde mit Angular entwickelt. Hier ist das entsprechende 
+        <a href="https://github.com/JohnBroda/Portfolio" class="pg">GitHub</a> Repository.</span>
+    @if(language.currentLanguage){
     @for(pfproject of portfolioItems; track pfproject;){
     <div class="{{ [pfproject.direction] }}">
         <div class="{{ [pfproject.direction] }}Text">
@@ -28,5 +33,22 @@
         </div>
         <img src="{{ [pfproject.imageUrl] }}">
     </div>
+    }
+    }
+    @if(!language.currentLanguage){
+    @for(pfproject of portfolioItemsDE; track pfproject;){
+    <div class="{{ [pfproject.direction] }}">
+        <div class="{{ [pfproject.direction] }}Text">
+            <h2>{{ [pfproject.title] }}</h2>
+            <h3>{{ [pfproject.subtitle] }}</h3>
+            <p>{{ [pfproject.description] }}</p>
+            <div class="link">
+                <a href="{{ [pfproject.serverLink] }}" class="test" target="_blank">Testen</a>
+                <a href="{{ [pfproject.gitLink] }}" class="github" target="_blank">Github</a>
+            </div>
+        </div>
+        <img src="{{ [pfproject.imageUrl] }}">
+    </div>
+    }
     }
 </div>

@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../language.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  language = inject(LanguageService);
+
   images0to3 = [
     { name: 'Angular', number: 0},  
     { name: 'TypeScript', number: 1},

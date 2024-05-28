@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../language.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.scss'
 })
 export class ImpressumComponent {
-
+  language = inject(LanguageService);
 }

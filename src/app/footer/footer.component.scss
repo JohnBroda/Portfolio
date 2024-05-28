@@ -4,7 +4,7 @@ footer {
     position: relative;
     @include flex(start, center, column);
     height: 240px;
-    margin-top: 120px;
+    margin-top: 150px;
     background-color: #141d2f;
     box-shadow: 0px 0px 0px 4px #00BEE8;
     z-index: 5;
@@ -62,7 +62,7 @@ footer {
 @media screen and (max-width: 800px) {
     footer {
         height: 320px;
-        margin-top: 40px;
+        margin-top: 350px;
         @include flex(center, center, column);
 
         .footerflex {
